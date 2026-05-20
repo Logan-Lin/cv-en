@@ -15,26 +15,27 @@
     headheight=14pt, footskip=1.0cm]{geometry}
 
 \RequirePackage[dvipsnames]{xcolor}
-\definecolor{accent}{HTML}{1F3A5F}
+\definecolor{accent}{HTML}{0D3363}
+\definecolor{link}{HTML}{3568A8}
 \definecolor{rule}{HTML}{B0B0B0}
 \definecolor{muted}{HTML}{606060}
 
 \RequirePackage{hyperref}
 \hypersetup{
     colorlinks=true,
-    urlcolor=accent,
-    linkcolor=accent,
-    citecolor=accent,
+    urlcolor=link,
+    linkcolor=link,
+    citecolor=link,
     pdfauthor={Yan Lin}
 }
 
 \RequirePackage{titlesec}
 \titleformat{\section}
-    {\Large\bfseries\color{accent}}{}{0pt}{}%
+    {\cvlarge\bfseries\color{accent}}{}{0pt}{}%
     [\vspace{2pt}{\color{rule}\titlerule[0.4pt]}]
 \titlespacing*{\section}{0pt}{12pt}{6pt}
 \titleformat{\subsection}
-    {\large\bfseries\color{accent!85!black}}{}{0pt}{}
+    {\cvmedium\bfseries\color{accent!85!black}}{}{0pt}{}
 \titlespacing*{\subsection}{0pt}{8pt}{2pt}
 
 \RequirePackage{enumitem}
@@ -54,16 +55,20 @@
 \fancyfoot[L]{{\cvsmall\color{muted}Yan Lin / CV (updated \today)}}
 \fancyfoot[R]{{\cvsmall\color{muted}\thepage\,/\,\NoHyper\pageref{LastPage}\endNoHyper}}
 
+\newcommand{\cvhuge}{\fontsize{24pt}{28pt}\selectfont}
+\newcommand{\cvlarge}{\fontsize{14pt}{17pt}\selectfont}
+\newcommand{\cvmedium}{\fontsize{12pt}{14pt}\selectfont}
 \newcommand{\cvnormal}{\fontsize{11pt}{13pt}\selectfont}
 \newcommand{\cvsmall}{\fontsize{9pt}{11pt}\selectfont}
+\let\normalsize\cvnormal
 
 \newlength{\entryskip}
 \setlength{\entryskip}{6pt}
 
 \newcommand{\me}{\textbf{Yan Lin}}
 
-\newcommand{\cvname}[1]{\noindent{\Huge\bfseries\color{accent}#1}\par\vspace{2pt}}
-\newcommand{\cvtagline}[1]{\noindent{\large\color{muted}#1}\par\vspace{6pt}}
+\newcommand{\cvname}[1]{\noindent{\cvhuge\bfseries\color{accent}#1}\par\vspace{2pt}}
+\newcommand{\cvtagline}[1]{\noindent{\cvmedium\color{muted}#1}\par\vspace{6pt}}
 
 \newcommand{\tags}[1]{{\cvsmall #1}}
 
