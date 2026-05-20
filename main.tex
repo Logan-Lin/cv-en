@@ -1,0 +1,430 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{microtype}
+\emergencystretch=2em
+
+\usepackage{sourcesanspro}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage[a4paper,
+    top=1.8cm, bottom=2.0cm, left=2.0cm, right=2.0cm,
+    headheight=14pt, footskip=1.0cm]{geometry}
+
+\usepackage[dvipsnames]{xcolor}
+\definecolor{accent}{HTML}{1F3A5F}
+\definecolor{rule}{HTML}{B0B0B0}
+\definecolor{muted}{HTML}{606060}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=accent,
+    linkcolor=accent,
+    citecolor=accent,
+    pdftitle={Yan Lin - Curriculum Vitae},
+    pdfauthor={Yan Lin}
+}
+
+\usepackage{titlesec}
+\titleformat{\section}
+    {\Large\bfseries\color{accent}}{}{0pt}{}%
+    [\vspace{2pt}{\color{rule}\titlerule[0.4pt]}]
+\titlespacing*{\section}{0pt}{12pt}{6pt}
+\titleformat{\subsection}
+    {\large\bfseries\color{accent!85!black}}{}{0pt}{}
+\titlespacing*{\subsection}{0pt}{8pt}{2pt}
+
+\usepackage{enumitem}
+\setlist{nosep, leftmargin=1.25em, labelsep=0.6em}
+\setlist[itemize]{label=\textbullet}
+
+\usepackage{array}
+\usepackage{tabularx}
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{needspace}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyfoot[L]{{\cvsmall\color{muted}Yan Lin / CV (updated \today)}}
+\fancyfoot[R]{{\cvsmall\color{muted}\thepage\,/\,\NoHyper\pageref{LastPage}\endNoHyper}}
+
+\newcommand{\cvnormal}{\fontsize{11pt}{14pt}\selectfont}
+\newcommand{\cvsmall}{\fontsize{9pt}{11pt}\selectfont}
+
+\newcommand{\me}{\textbf{Yan Lin}}
+
+\newcommand{\cvname}[1]{\noindent{\Huge\bfseries\color{accent}#1}\par\vspace{2pt}}
+\newcommand{\cvtagline}[1]{\noindent{\large\color{muted}#1}\par\vspace{6pt}}
+
+\newcommand{\tags}[1]{{\cvsmall #1}}
+
+\newcommand{\pubentry}[4]{%
+    \par\medskip
+    \needspace{4\baselineskip}%
+    \noindent
+    {\cvsmall\makebox[\linewidth][l]{\tags{#1}\hfill #2}\par\nobreak}%
+    \noindent #3\par\nobreak
+    \noindent{\cvsmall\color{muted}#4\par}}
+
+\newcommand{\roleentry}[4]{%
+    \par
+    \needspace{3\baselineskip}%
+    \noindent
+    \makebox[\linewidth][l]{\textbf{#1}\hfill{\color{muted}#3}}\par\nobreak
+    \noindent #2\par\nobreak
+    \ifx&#4&\else\noindent{\cvsmall\color{muted}#4}\par\fi
+    \medskip}
+
+\newcommand{\descblock}[1]{%
+    \par\noindent{\cvnormal #1}\par\smallskip}
+
+\newcommand{\award}[2]{\item \textbf{#1} \hfill {\color{muted}\cvsmall #2}}
+
+\begin{document}
+\cvnormal
+
+\cvname{Yan Lin}
+\cvtagline{Postdoctoral Researcher / Department of Computer Science / Aalborg University}
+
+\noindent
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+Email: \href{mailto:lyan@cs.aau.dk}{lyan@cs.aau.dk} \,/\,
+Homepage: \href{https://www.yanlincs.com}{yanlincs.com}
+& {\color{muted}+45 9186-1833}
+\end{tabularx}
+\vspace{-10pt}\par\noindent{\color{rule}\rule{\linewidth}{0.4pt}}\vspace{4pt}
+
+\section*{Bio}
+\noindent
+I am a researcher in computer science.
+My established research centers on data mining, i.e., the extraction and use of patterns from large-scale data with machine learning models.
+My current focus spans trajectory representation learning, spatiotemporal data mining, and interdisciplinary research between data mining and materials science.
+I am also building my teaching experience, drawing on both my research background and my hobbyist exploration of computer science.
+
+\section*{Education}
+
+\roleentry{Beijing Jiaotong University}{Ph.D. in Computer Science}{Sep 2019 -- Mar 2024}
+{Thesis: Self-supervised Learning of Spatiotemporal Trajectory Data. Advisor: Prof. Huaiyu Wan.}
+
+\roleentry{Aalborg University}{Visiting Ph.D. Student}{Sep 2022 -- Sep 2023}
+{Advisors: Prof. Bin Yang and Prof. Jilin Hu.}
+
+\roleentry{Beijing Jiaotong University}{B.Sc. in Computer Science}{Sep 2015 -- Jun 2019}{}
+
+\section*{Experience}
+
+\roleentry{Department of Computer Science, Aalborg University}{Postdoctoral Researcher}{Jun 2024 -- present}
+{Working on trajectory representation learning and interdisciplinary research between data mining and materials science.}
+
+\section*{Research}
+
+\subsection*{Trajectory Representation Learning}
+\descblock{Trajectory representation learning is one of my established research topics. It aims to learn representations of trajectories (of vehicle, human, or vessel) that are universal across various downstream tasks. This also extends to building a multi-task or foundational model for trajectories that can perform various tasks at once.}
+
+\pubentry{IEEE TKDE, 2025}{\href{https://ieeexplore.ieee.org/document/10818577}{Paper} \,/\, \href{https://github.com/Logan-Lin/UniTE}{Code}}
+{UniTE: A Survey and Unified Pipeline for Pre-training Spatiotemporal Trajectory Embeddings}
+{\me, Zeyu Zhou, Yicheng Liu, Haochen Lv, Haomin Wen, Tianyi Li, Yushuai Li, Christian S. Jensen, Shengnan Guo, Youfang Lin, Huaiyu Wan}
+
+\pubentry{IEEE TKDE, 2025}{\href{https://ieeexplore.ieee.org/document/11004614}{Paper} \,/\, \href{https://github.com/Logan-Lin/UVTM}{Code}}
+{UVTM: Universal Vehicle Trajectory Modeling with ST Feature Domain Generation}
+{\me, Jilin Hu, Shengnan Guo, Bin Yang, Christian S. Jensen, Youfang Lin, Huaiyu Wan}
+
+\pubentry{NeurIPS, 2025}{\href{https://neurips.cc/virtual/2025/oral/117509}{Oral} \,/\, \href{https://neurips.cc/virtual/2025/poster/117508}{Poster}}
+{TransferTraj: A Vehicle Trajectory Learning Model for Region and Task Transferability}
+{Tonglong Wei*, \me*, Zeyu Zhou, Haomin Wen, Jilin Hu, Shengnan Guo, Youfang Lin, Gao Cong, Huaiyu Wan}
+
+\pubentry{NeurIPS, 2025}{\href{https://neurips.cc/virtual/2025/poster/115959}{Poster}}
+{TrajMamba: An Efficient and Semantic-rich Vehicle Trajectory Pre-training Model}
+{Yichen Liu*, \me*, Shengnan Guo, Zeyu Zhou, Youfang Lin, Huaiyu Wan}
+
+\pubentry{IEEE TKDE, 2023}{\href{https://ieeexplore.ieee.org/abstract/document/10375102}{Paper} \,/\, \href{https://github.com/Logan-Lin/MMTEC}{Code}}
+{Pre-training General Trajectory Embeddings with Maximum Multi-view Entropy Coding}
+{\me, Huaiyu Wan, Shengnan Guo, Jilin Hu, Christian S. Jensen, Youfang Lin}
+
+\pubentry{AAAI, 2021}{\href{https://ojs.aaai.org/index.php/AAAI/article/view/16548}{Paper} \,/\, \href{https://github.com/Logan-Lin/CTLE}{Code}}
+{Pre-training Context and Time Aware Location Embeddings from Spatial-Temporal Trajectories for User Next Location Prediction}
+{\me, Huaiyu Wan, Shengnan Guo, Youfang Lin}
+
+\subsection*{Spatiotemporal Data Mining}
+\descblock{Spatiotemporal data mining is a broader topic that is inclusive of the above. It covers research on extracting and utilizing patterns from large-scale data with spatial information that is dynamic over time, usually sourced from transportation scenarios.}
+
+\pubentry{SIGMOD, 2024}{\href{https://dl.acm.org/doi/10.1145/3617337}{Paper} \,/\, \href{https://github.com/Logan-Lin/DOT}{Code}}
+{Origin-Destination Travel Time Oracle for Map-based Services}
+{\me, Huaiyu Wan, Jilin Hu, Shengnan Guo, Bin Yang, Christian S. Jensen, Youfang Lin}
+
+\pubentry{KDD, 2026}{\href{https://arxiv.org/abs/2512.21685}{Preprint}}
+{RIPCN: A Road Impedance Principal Component Network for Probabilistic Traffic Flow Forecasting}
+{Haochen Lv*, \me*, Shengnan Guo, Xiaowei Mao, Hong Nie, Letian Gong, Youfang Lin, Huaiyu Wan}
+
+\pubentry{NeurIPS, 2025}{\href{https://neurips.cc/virtual/2025/poster/117945}{Poster} \,/\, \href{https://arxiv.org/abs/2410.14281}{Preprint}}
+{PLMTrajRec: A Scalable and Generalizable Trajectory Recovery Method with Pre-trained Language Models}
+{Tonglong Wei*, \me*, Youfang Lin, Shengnan Guo, Jilin Hu, Haitao Yuan, Gao Cong, Huaiyu Wan}
+
+\pubentry{WWW, 2025}{\href{https://openreview.net/forum?id=KmMSQS6tFn}{Paper} \,/\, \href{https://github.com/decisionintelligence/Path-LLM}{Code}}
+{Path-LLM: A Multi-Modal Path Representation Learning by Aligning and Fusing with Large Language Models}
+{Yongfu Wei*, \me*, Hongfan Gao, Ronghui Xu, Sean Bin Yang, Jilin Hu}
+
+\pubentry{AAAI, 2025}{\href{https://ojs.aaai.org/index.php/AAAI/article/view/33350}{Paper}}
+{DutyTTE: Deciphering Uncertainty in Origin-Destination Travel Time Estimation}
+{Xiaowei Mao*, \me*, Shengnan Guo, Yubin Chen, Xingyu Xian, Haomin Wen, Qisen Xu, Youfang Lin, Huaiyu Wan}
+
+\pubentry{NeurIPS, 2024}{\href{https://openreview.net/forum?id=0feJEykDRx}{Paper} \,/\, \href{https://neurips.cc/virtual/2024/poster/96914}{Poster}}
+{Mobility-LLM: Learning Visiting Intentions and Travel Preference from Human Mobility Data with Large Language Models}
+{Letian Gong*, \me*, Xinyue Zhang, Yiwen Lu, Xuedi Han, Yichen Liu, Shengnan Guo, Youfang Lin, Huaiyu Wan}
+
+\subsection*{Data Mining \& Materials Science}
+\descblock{Interdisciplinary research between data mining and materials science is a new direction I am exploring. The promise is that data mining enables discovery of new materials with tailored properties, a non-trivial process in traditional materials design.}
+
+\pubentry{NeurIPS Workshop, 2025}{\href{https://openreview.net/forum?id=cEgjPFdLvl}{Paper}}
+{AMDEN: Amorphous Materials DEnoising Network}
+{Jonas A. Finkler*, \me*, Morten M. Smedskjaer, Tao Du, Jilin Hu}
+
+\pubentry{AAAI, 2026}{\href{https://ojs.aaai.org/index.php/AAAI/article/view/37139}{Paper} \,/\, \href{https://arxiv.org/abs/2511.12489}{Preprint}}
+{SculptDrug: A Spatial Condition-Aware Bayesian Flow Model for Structure-based Drug Design}
+{Qingsong Zhong, Haomin Yu, \me, Wangmeng Shen, Long Zeng, Jilin Hu}
+
+\pubentry{Villum Foundation, Project}{}
+{Inverse Design of Materials Using Diffusion Probabilistic Models}
+{Diffusion probabilistic models for understanding chemistry-structure-property relationships and inverse design of new materials.}
+
+\section*{Teaching}
+
+\subsection*{Course Teaching}
+\descblock{My course teaching follows three core principles: a solid understanding of the subject matter, awareness of students' established experiences and background, and problem-based learning style applied throughout lectures, exercises, and exams. This translates to practices including tailor-made blog-style literature, inspirational lectures that connect theory to real-world problems, and progressively-arranged hands-on exercises.}
+
+\pubentry{Aalborg University, Fall 2025}{\href{https://blog.yanlincs.com/ai-system/}{Literature}}
+{AI Systems \& Infrastructure}
+{Course on streamlined interaction with AI models and the implementation and deployment of scalable, production-ready AI systems on real-world infrastructures.}
+
+\subsection*{Student Supervision}
+\descblock{I am building my supervision experience, currently supervising Bachelor's-level semester projects. My supervision focuses on problem definition, critical thinking about design choices, and delivering convincing conclusions.}
+
+\pubentry{Aalborg University, 2025 -- 2026}{\href{https://github.com/Logan-Lin/camera-sees-behind/releases/tag/v1.2-sw6-26}{Proposal}}
+{A Camera That Sees Behind}
+{A lightweight model deployable on embedded devices to remove humans from images and video feeds, serving as a prototype GDPR-compliant surveillance system.}
+
+\section*{Service}
+\noindent
+I actively contribute to the academic community through professional membership and peer review of journal and conference papers.
+\begin{itemize}
+    \item IEEE, ACM member
+    \item Secretary of IEEE (Denmark Section) Computer Society
+    \item Reviewer for journals: TKDE, TKDD, TNNLS, TIST, TII, and TVT
+    \item Member of program committees of conferences: KDD, ICLR, NeurIPS, AAAI, CVPR, ICCV, IJCAI, WWW, and WACV
+\end{itemize}
+
+\section*{Publications}
+\noindent{\cvnormal Bold indicates the author of this CV. An asterisk (*) denotes equal contribution.}\par\smallskip
+
+\subsection*{Primary (first, co-first, or lead student author)}
+\descblock{Publications where I am the first, co-first, or lead student author. For each work, I contribute significantly to some or all of the following: problem formulation, algorithm design, paper drafting and revision, code implementation, and experimental evaluation.}
+
+\pubentry{IJCAI, 2026}{\href{https://arxiv.org/abs/2603.29837}{Preprint}}
+{DiSGMM: A Method for Time-varying Microscopic Weight Completion on Road Networks}
+{\me, Jilin Hu, Shengnan Guo, Christian S. Jensen, Youfang Lin, Huaiyu Wan}
+
+\pubentry{IJCAI, 2026}{}
+{TrajAR: Long-Term Trajectory Prediction at Urban Intersections via Multi-scale Interaction Perception}
+{Letian Gong*, \me*, Xinyue Zhang, YiWei Shuang, Guanyu Yao, Cheng Long, Shengnan Guo, Youfang Lin, Huaiyu Wan}
+
+\pubentry{KDD, 2026}{\href{https://arxiv.org/abs/2512.21685}{Preprint}}
+{RIPCN: A Road Impedance Principal Component Network for Probabilistic Traffic Flow Forecasting}
+{Haochen Lv*, \me*, Shengnan Guo, Xiaowei Mao, Hong Nie, Letian Gong, Youfang Lin, Huaiyu Wan}
+
+\pubentry{NeurIPS, 2025}{\href{https://neurips.cc/virtual/2025/poster/115959}{Poster}}
+{TrajMamba: An Efficient and Semantic-rich Vehicle Trajectory Pre-training Model}
+{Yichen Liu*, \me*, Shengnan Guo, Zeyu Zhou, Youfang Lin, Huaiyu Wan}
+
+\pubentry{NeurIPS, 2025}{\href{https://neurips.cc/virtual/2025/oral/117509}{Oral} \,/\, \href{https://neurips.cc/virtual/2025/poster/117508}{Poster} \,/\, \href{https://arxiv.org/abs/2505.12672}{Preprint}}
+{TransferTraj: A Vehicle Trajectory Learning Model for Region and Task Transferability}
+{Tonglong Wei*, \me*, Zeyu Zhou, Haomin Wen, Jilin Hu, Shengnan Guo, Youfang Lin, Gao Cong, Huaiyu Wan}
+
+\pubentry{NeurIPS, 2025}{\href{https://neurips.cc/virtual/2025/poster/117945}{Poster} \,/\, \href{https://arxiv.org/abs/2410.14281}{Preprint}}
+{PLMTrajRec: A Scalable and Generalizable Trajectory Recovery Method with Pre-trained Language Models}
+{Tonglong Wei*, \me*, Youfang Lin, Shengnan Guo, Jilin Hu, Haitao Yuan, Gao Cong, Huaiyu Wan}
+
+\pubentry{IEEE TKDE, 2025}{\href{https://ieeexplore.ieee.org/document/11004614}{Paper} \,/\, \href{https://arxiv.org/abs/2402.07232}{Preprint} \,/\, \href{https://github.com/Logan-Lin/UVTM}{Code}}
+{UVTM: Universal Vehicle Trajectory Modeling with ST Feature Domain Generation}
+{\me, Jilin Hu, Shengnan Guo, Bin Yang, Christian S. Jensen, Youfang Lin, Huaiyu Wan}
+
+\pubentry{IJCAI, 2025}{\href{https://www.ijcai.org/proceedings/2025/411}{Paper} \,/\, \href{https://arxiv.org/abs/2405.12459}{Preprint} \,/\, \href{https://github.com/Zeru19/PLM4Traj}{Code}}
+{TrajCogn: Leveraging LLMs for Cognizing Movement Patterns and Travel Purposes from Trajectories}
+{Zeyu Zhou*, \me*, Haomin Wen, Shengnan Guo, Jilin Hu, Youfang Lin, Huaiyu Wan}
+
+\pubentry{IEEE TKDE, 2025}{\href{https://ieeexplore.ieee.org/document/10818577}{Paper} \,/\, \href{https://arxiv.org/abs/2407.12550}{Preprint} \,/\, \href{https://github.com/Logan-Lin/UniTE}{Code}}
+{UniTE: A Survey and Unified Pipeline for Pre-training Spatiotemporal Trajectory Embeddings}
+{\me, Zeyu Zhou, Yicheng Liu, Haochen Lv, Haomin Wen, Tianyi Li, Yushuai Li, Christian S. Jensen, Shengnan Guo, Youfang Lin, Huaiyu Wan}
+
+\pubentry{WWW, 2025}{\href{https://openreview.net/forum?id=KmMSQS6tFn}{Paper} \,/\, \href{https://github.com/decisionintelligence/Path-LLM}{Code}}
+{Path-LLM: A Multi-Modal Path Representation Learning by Aligning and Fusing with Large Language Models}
+{Yongfu Wei*, \me*, Hongfan Gao, Ronghui Xu, Sean Bin Yang, Jilin Hu}
+
+\pubentry{AAAI, 2025}{\href{https://ojs.aaai.org/index.php/AAAI/article/view/33350}{Paper} \,/\, \href{https://arxiv.org/abs/2408.12809}{Preprint}}
+{DutyTTE: Deciphering Uncertainty in Origin-Destination Travel Time Estimation}
+{Xiaowei Mao*, \me*, Shengnan Guo, Yubin Chen, Xingyu Xian, Haomin Wen, Qisen Xu, Youfang Lin, Huaiyu Wan}
+
+\pubentry{NeurIPS, 2024}{\href{https://openreview.net/forum?id=0feJEykDRx}{Paper} \,/\, \href{https://neurips.cc/virtual/2024/poster/96914}{Poster}}
+{Mobility-LLM: Learning Visiting Intentions and Travel Preference from Human Mobility Data with Large Language Models}
+{Letian Gong*, \me*, Xinyue Zhang, Yiwen Lu, Xuedi Han, Yichen Liu, Shengnan Guo, Youfang Lin, Huaiyu Wan}
+
+\pubentry{SIGMOD, 2024}{\href{https://dl.acm.org/doi/10.1145/3617337}{Paper} \,/\, \href{https://arxiv.org/abs/2307.03048}{Preprint} \,/\, \href{https://github.com/Logan-Lin/DOT}{Code}}
+{Origin-Destination Travel Time Oracle for Map-based Services}
+{\me, Huaiyu Wan, Jilin Hu, Shengnan Guo, Bin Yang, Christian S. Jensen, Youfang Lin}
+
+\pubentry{IEEE TKDE, 2023}{\href{https://ieeexplore.ieee.org/abstract/document/10375102}{Paper} \,/\, \href{https://arxiv.org/abs/2207.14539}{Preprint} \,/\, \href{https://github.com/Logan-Lin/MMTEC}{Code}}
+{Pre-training General Trajectory Embeddings with Maximum Multi-view Entropy Coding}
+{\me, Huaiyu Wan, Shengnan Guo, Jilin Hu, Christian S. Jensen, Youfang Lin}
+
+\pubentry{IEEE TKDE, 2022}{\href{https://ieeexplore.ieee.org/abstract/document/9351627}{Paper} \,/\, \href{https://github.com/Logan-Lin/TALE}{Code}}
+{Pre-training Time-Aware Location Embeddings from Spatial-Temporal Trajectories}
+{Huaiyu Wan, \me, Shengnan Guo, Youfang Lin}
+
+\pubentry{AAAI, 2021}{\href{https://ojs.aaai.org/index.php/AAAI/article/view/16548}{Paper} \,/\, \href{https://github.com/Logan-Lin/CTLE}{Code}}
+{Pre-training Context and Time Aware Location Embeddings from Spatial-Temporal Trajectories for User Next Location Prediction}
+{\me, Huaiyu Wan, Shengnan Guo, Youfang Lin}
+
+\subsection*{Secondary (contributing author)}
+\descblock{Publications where I serve as a contributing author. My involvement in these works typically includes technical discussion, algorithm refinement, or contribution to experiments and writing.}
+
+\pubentry{KDD, 2026}{}
+{Low-Rank Prior-Induced Consistency Flow Matching for Efficient Traffic Imputation}
+{Xiaowei Mao, Tingrui Wu, Yang Yawen, Shengnan Guo, \me, Shilong Zhao, Haochen Lv, Youfang Lin, Huaiyu Wan}
+
+\pubentry{IJCAI, 2026}{}
+{G-VTM: A Multimodal Vision-Trajectory Model for Generalized Vehicle Trajectory Prediction}
+{Xinyue Zhang, Letian Gong, \me, Jinjun Cheng, Junlin Zhang, Guanyu Yao, Shengnan Guo, Youfang Lin, Shaojiang Wang, Huaiyu Wan}
+
+\pubentry{DASFAA, 2026}{\href{https://link.springer.com/chapter/10.1007/978-981-92-0375-8_24}{Paper}}
+{ForceTraj: Modeling Realistic Intention and Heterogeneous Interactions for Multi-modal Trajectory Prediction}
+{Guanyu Yao, \me, Letian Gong, Xinyue Zhang, Yiwei Shuang, Shengnan Guo, Huaiyu Wan}
+
+\pubentry{KDD, 2026}{\href{https://arxiv.org/abs/2509.00053}{Preprint}}
+{Traj-MLLM: Can Multimodal Large Language Models Reform Trajectory Data Mining?}
+{Shuo Liu, Di Yao, \me, Gao Cong, Jingping Bi}
+
+\pubentry{AAAI, 2026}{\href{https://ojs.aaai.org/index.php/AAAI/article/view/37139}{Paper} \,/\, \href{https://arxiv.org/abs/2511.12489}{Preprint}}
+{SculptDrug: A Spatial Condition-Aware Bayesian Flow Model for Structure-based Drug Design}
+{Qingsong Zhong, Haomin Yu, \me, Wangmeng Shen, Long Zeng, Jilin Hu}
+
+\pubentry{AAAI, 2026}{\href{https://ojs.aaai.org/index.php/AAAI/article/view/38581}{Paper} \,/\, \href{https://arxiv.org/abs/2601.04572}{Preprint}}
+{Spatial-Temporal Feedback Diffusion Guidance for Controlled Traffic Imputation}
+{Xiaowei Mao, Huihu Ding, \me, Tingrui Wu, Shengnan Guo, Dazhuo Qiu, Feiling Fang, Jilin Hu, Huaiyu Wan}
+
+\pubentry{KDD, 2025}{\href{https://dl.acm.org/doi/10.1145/3690624.3709325}{Paper} \,/\, \href{https://arxiv.org/abs/2412.10859}{Preprint} \,/\, \href{https://github.com/decisionintelligence/DUET}{Code}}
+{DUET: Dual Clustering Enhanced Multivariate Time Series Forecasting}
+{Xiangfei Qiu, Xingjian Wu, \me, Chenjuan Guo, Jilin Hu, Bin Yang}
+
+\pubentry{IEEE TKDE, 2024}{\href{https://www.computer.org/csdl/journal/tk/5555/01/10679607/20b3hlbjBOo}{Paper} \,/\, \href{https://arxiv.org/abs/2402.07369}{Preprint} \,/\, \href{https://github.com/wtl52656/Diff-RNTraj}{Code}}
+{Diff-RNTraj: A Structure-aware Diffusion Model for Road Network-constrained Trajectory Generation}
+{Tonglong Wei, Youfang Lin, Shengnan Guo, \me, Yiheng Huang, Chenyang Xiang, Yuqing Bai, Menglu Ya, Huaiyu Wan}
+
+\pubentry{IEEE TKDE, 2024}{\href{https://ieeexplore.ieee.org/document/10836764}{Paper}}
+{STCDM: Spatio-Temporal Contrastive Diffusion Model for Check-In Sequence Generation}
+{Letian Gong, Shengnan Guo, \me, Yichen Liu, Erwen Zheng, Yiwei Shuang, Youfang Lin, Jilin Hu, Huaiyu Wan}
+
+\pubentry{IEEE TKDE, 2024}{\href{https://www.computer.org/csdl/journal/tk/5555/01/10517676/1WCj0j0FljW}{Paper} \,/\, \href{https://arxiv.org/abs/2404.19141}{Preprint} \,/\, \href{https://github.com/wtl52656/MM-STGED}{Code}}
+{Micro-Macro Spatial-Temporal Graph-based Encoder-Decoder for Map-Constrained Trajectory Recovery}
+{Tonglong Wei, Youfang Lin, \me, Shengnan Guo, Lan Zhang, Huaiyu Wan}
+
+\pubentry{KBS, 2024}{\href{https://www.sciencedirect.com/science/article/pii/S0950705123010730}{Paper} \,/\, \href{https://github.com/wtl52656/IAGCN}{Code}}
+{Inductive and Adaptive Graph Convolution Networks Equipped with Constraint Task for Spatial-Temporal Traffic Data Kriging}
+{Tonglong Wei, Youfang Lin, Shengnan Guo, \me, Yiji Zhao, Xiyuan Jin, Zhihao Wu, Huaiyu Wan}
+
+\pubentry{IEEE TKDE, 2024}{\href{https://ieeexplore.ieee.org/document/10613424}{Paper} \,/\, \href{https://arxiv.org/abs/2407.15899}{Preprint}}
+{Spatial-Temporal Cross-View Contrastive Pre-Training for Check-in Sequence Representation Learning}
+{Letian Gong, Huaiyu Wan, Shengnan Guo, Li Xiucheng, \me, Erwen Zheng, Tianyi Wang, Zeyu Zhou, Youfang Lin}
+
+\pubentry{AAAI, 2023}{\href{https://ojs.aaai.org/index.php/AAAI/article/view/25546}{Paper} \,/\, \href{https://github.com/LetianGong/CACSR}{Code}}
+{Contrastive Pre-training with Adversarial Perturbations for Check-In Sequence Representation Learning}
+{Letian Gong, Youfang Lin, Shengnan Guo, \me, Tianyi Wang, Erwen Zheng, Zeyu Zhou, Huaiyu Wan}
+
+\pubentry{ESWA, 2023}{\href{https://www.sciencedirect.com/science/article/pii/S0957417423012241}{Paper}}
+{Adversarial Self-Attentive Time-Variant Neural Networks for Multi-Step Time Series Forecasting}
+{Changxia Gao, Ning Zhang, Youru Li, \me, Huaiyu Wan}
+
+\pubentry{APIN, 2023}{\href{https://link.springer.com/article/10.1007/s10489-023-05057-7}{Paper}}
+{Multi-scale Adaptive Attention-based Time-Variant Neural Networks for Multi-step Time Series Forecasting}
+{Changxia Gao, Ning Zhang, Youru Li, \me, Huaiyu Wan}
+
+\pubentry{NeurIPS, 2023}{\href{https://openreview.net/forum?id=y08bkEtNBK}{Paper} \,/\, \href{https://github.com/Water2sea/WITRAN}{Code}}
+{WITRAN: Water-wave Information Transmission and Recurrent Acceleration Network for Long-range Time Series Forecasting}
+{Yuxin Jia, Youfang Lin, Xinyan Hao, \me, Shengnan Guo, Huaiyu Wan}
+
+\section*{Projects}
+
+\subsection*{Principal Investigator}
+\descblock{Projects where I serve as the principal investigator or lead developer, responsible for the overall research direction, system design, and implementation.}
+
+\pubentry{Fundamental Research Funds for the Central Universities of China, 2021 -- 2023}{}
+{Prediction of User Travel Destination and Travel Time Based on Trajectory Representation Learning}
+{Applies representation learning to trajectory data to transform original features into high-level information, improving the performance of downstream tasks such as travel time and destination prediction.}
+
+\pubentry{Personal Interest Project, 2023 -- present}{\href{https://www.overleafcopilot.com/}{Home} \,/\, \href{https://chromewebstore.google.com/detail/overleaf-copilot/eoadabdpninlhkkbhngoddfjianhlghb}{Install}}
+{OverleafCopilot: Empowering Academic Writing in Overleaf with Large Language Models}
+{A browser extension that integrates large language models into the academic writing platform Overleaf.}
+
+\pubentry{Personal Interest Project, 2023 -- present}{\href{https://www.promptgenius.site/}{Website} \,/\, \href{https://github.com/wenhaomin/ChatGPT-PromptGenius}{Code}}
+{PromptGenius: All-purpose Prompts for LLMs}
+{A website offering a wide range of prompt categories for various LLM tasks.}
+
+\subsection*{Participant}
+\descblock{Projects where I participate as a key researcher, contributing to specific aspects such as model development, data analysis, or experimental design.}
+
+\pubentry{Villum Foundation, 2024 -- 2026}{}
+{Inverse Design of Materials Using Diffusion Probabilistic Models}
+{Develops diffusion probabilistic models to understand the relationship between chemistry, structure, and material properties, then enables the inverse design of new materials with specific properties.}
+
+\pubentry{National Natural Science Foundation of China, 2023 -- 2025}{}
+{Pre-training Representation Learning Methods of Spatial-temporal Trajectory Data for Traffic Prediction}
+{Proposes pre-training representation learning methods for spatial-temporal trajectory data, modeling multiple features to improve traffic prediction tasks.}
+
+\pubentry{National Natural Science Foundation of China, 2024 -- 2026}{}
+{Spatial-temporal Trajectory Generation and Representation Learning Methods for Sparsity Problems}
+{Explores how to generate high-quality spatial-temporal trajectory data and corresponding representations to address sparsity-related issues for downstream tasks.}
+
+\section*{Presentations}
+
+\pubentry{NeurIPS Workshop, 2025}{\href{https://openreview.net/forum?id=cEgjPFdLvl}{Paper}}
+{AMDEN: Amorphous Materials DEnoising Network}
+{Jonas A. Finkler*, \me*, Morten M. Smedskjaer, Tao Du, Jilin Hu}
+
+\pubentry{Oral Presentation, PNCS17, 2025}{\href{https://github.com/Logan-Lin/amden-presentation/releases/tag/v1.2-pncs17}{Slides}}
+{AMDEN: Amorphous Materials DEnoising Network}
+{\me*, Jonas A. Finkler*, Tao Du, Morten M. Smedskjaer, Jilin Hu}
+
+\pubentry{Guest Lecture, Aalborg University, 2024}{}
+{Self-supervised Learning of Trajectory Data}
+{\me}
+
+\pubentry{KDD Workshop, 2024}{\href{https://arxiv.org/abs/2405.12459}{Paper}}
+{PLM4Traj: Leveraging Pre-trained Language Models for Cognizing Movement Patterns and Travel Purposes from Trajectories}
+{Zeyu Zhou*, \me*, Haomin Wen, Qisen Xu, Shengnan Guo, Jilin Hu, Youfang Lin, Huaiyu Wan}
+
+\pubentry{Paper Oral, SIGMOD 2024}{}
+{Origin-Destination Travel Time Oracle for Map-based Services}
+{\me}
+
+\pubentry{Tutorial, SpatialDI 2024}{}
+{Self-supervised Learning of Spatial-temporal Trajectories}
+{\me}
+
+\pubentry{Paper Oral, AAAI 2021}{}
+{Pre-training Context and Time Aware Location Embeddings from Spatial-Temporal Trajectories for User Next Location Prediction}
+{\me}
+
+% \section*{Awards \& Honors}
+% 
+% \begin{itemize}
+% \award{Tencent Rhino-Bird Elite Talent}{2022, top 10\%}
+% \award{China Scholarship Council State Scholarship}{2022, top 5\% in China}
+% \award{First-class Academic Scholarship, Beijing Jiaotong University}{2020, 2021, 2023}
+% \award{National Scholarship of China}{2019, top 0.2\% in China}
+% \end{itemize}
+
+\end{document}
