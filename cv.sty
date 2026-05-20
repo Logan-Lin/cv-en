@@ -42,9 +42,6 @@
 \setlist{nosep, leftmargin=1.25em, labelsep=0.6em}
 \setlist[itemize]{label=\textbullet}
 
-\RequirePackage{array}
-\RequirePackage{tabularx}
-
 \RequirePackage{fancyhdr}
 \RequirePackage{lastpage}
 \RequirePackage{needspace}
@@ -52,14 +49,14 @@
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-\fancyfoot[L]{{\cvsmall\color{muted}Yan Lin / CV (updated \today)}}
-\fancyfoot[R]{{\cvsmall\color{muted}\thepage\,/\,\NoHyper\pageref{LastPage}\endNoHyper}}
+\fancyfoot[L]{{\cvnormal\color{muted}Yan Lin / CV (updated \today)}}
+\fancyfoot[R]{{\cvnormal\color{muted}\thepage\,/\,\NoHyper\pageref{LastPage}\endNoHyper}}
 
-\newcommand{\cvhuge}{\fontsize{24pt}{28pt}\selectfont}
+\newcommand{\cvhuge}{\fontsize{20pt}{24pt}\selectfont}
 \newcommand{\cvlarge}{\fontsize{14pt}{17pt}\selectfont}
 \newcommand{\cvmedium}{\fontsize{12pt}{14pt}\selectfont}
-\newcommand{\cvnormal}{\fontsize{11pt}{13pt}\selectfont}
-\newcommand{\cvsmall}{\fontsize{9pt}{11pt}\selectfont}
+\newcommand{\cvnormal}{\fontsize{10pt}{12pt}\selectfont}
+\newcommand{\cvsmall}{\fontsize{8pt}{10pt}\selectfont}
 \let\normalsize\cvnormal
 
 \newlength{\entryskip}
@@ -70,13 +67,11 @@
 \newcommand{\cvname}[1]{\noindent{\cvhuge\bfseries\color{accent}#1}\par\vspace{2pt}}
 \newcommand{\cvtagline}[1]{\noindent{\cvmedium\color{muted}#1}\par\vspace{6pt}}
 
-\newcommand{\tags}[1]{{\cvsmall #1}}
-
 \newcommand{\pubentry}[4]{%
     \par\vspace{\entryskip}
     \needspace{4\baselineskip}%
     \noindent
-    {\cvsmall\makebox[\linewidth][l]{\tags{#1}\hfill #2}\par\nobreak}%
+    {\cvsmall\makebox[\linewidth][l]{#1\hfill #2}\par\nobreak}%
     \noindent #3\par
     \ifx&#4&\else\nobreak\noindent{\cvsmall\color{muted}#4\par}\fi}
 
@@ -88,8 +83,5 @@
     \noindent #2\par\nobreak
     \ifx&#4&\else\noindent{\cvsmall\color{muted}#4}\par\fi
     \vspace{\entryskip}}
-
-\newcommand{\descblock}[1]{%
-    \par\noindent{\cvnormal #1}\par}
 
 \newcommand{\award}[2]{\item \textbf{#1} \hfill {\color{muted}\cvsmall #2}}
