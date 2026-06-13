@@ -68,12 +68,13 @@
 \newcommand{\cvname}[1]{{\cvhuge\bfseries\color{accent}#1}\par\vspace{2pt}}
 \newcommand{\cvtagline}[1]{{\cvmedium\color{muted}#1}\par\vspace{6pt}}
 
-\newcommand{\pubentry}[4]{%
+\newcommand{\pubentry}[5]{%
     \par\vspace{\entryskip}
     \needspace{4\baselineskip}%
     {\cvsmall\makebox[\linewidth][l]{#1\hfill #2}\par\nobreak}%
     #3\par
-    \ifx&#4&\else\nobreak{\cvsmall\color{muted}#4\par}\fi}
+    \ifx&#4&\else\nobreak{\cvsmall\color{muted}#4\par}\fi
+    \ifx&#5&\else\nobreak{\cvsmall\itshape\color{muted}#5\par}\fi}
 
 \newcommand{\roleentry}[4]{%
     \par
