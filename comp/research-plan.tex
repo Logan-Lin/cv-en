@@ -1,0 +1,64 @@
+\phantomsection\label{sec:research-plan}
+\section*{Research Plan}
+My research bridges data mining and materials science.
+My established work is in spatiotemporal data mining, where I develop machine learning methods that learn reusable patterns from large-scale data.
+
+\vspace{\entryskip}
+Building on this foundation, I am developing an interdisciplinary direction that applies machine learning to disordered materials science.
+My plan is to deepen and expand this direction so that machine learning can drive the discovery and design of disordered materials with tailored properties, while continuing my established research in parallel.
+
+\subsection*{Established Research: Spatiotemporal Data Mining}
+My established research is in spatiotemporal data mining, the extraction and use of patterns from large-scale data that carries spatial information and changes over time, usually sourced from transportation scenarios.
+It covers trajectory representation learning, travel time estimation, traffic forecasting, and time series analysis, with publications in top venues including NeurIPS, KDD, SIGMOD, AAAI, IJCAI, and IEEE TKDE.
+
+\vspace{\entryskip}
+A theme across this work is representation learning, which learns task-agnostic representations of data so that a separate model is not needed for each task.
+My survey UniTE brings the methods for trajectory representation learning together into a single modular pipeline, and my recent work extends this toward multi-task and foundational models for trajectories.
+This gives me a foundation of methods for learning from complex spatiotemporal data in a way that transfers across tasks and settings.
+
+\subsection*{Emerging Direction: AI for Materials Science}
+I am pursuing AI for materials science, an interdisciplinary direction that brings machine learning to the design of disordered materials.
+This direction is already underway through my Villum-funded postdoctoral project on inverse design of materials using diffusion probabilistic models, in collaboration with Morten M. Smedskjaer's group, one of the leading groups in disordered materials science.
+The direction is a natural progression of my established work, because disordered materials such as glasses are themselves spatial data without a fixed structure, and describing them well calls for the same representation learning I develop for trajectories.
+
+\vspace{\entryskip}
+The promise is that AI can discover new materials with tailored properties across a vast design space that traditional trial and error explores too slowly.
+This effort has already produced AMDEN, a diffusion model for the inverse design of amorphous materials, published as joint first author in Advanced Materials in 2026, together with a physics simulation pipeline that the collaboration runs and validates against experimental glass data.
+
+\subsection*{The Plan Ahead}
+My plan is to deepen and expand this interdisciplinary effort and to become a leading researcher in AI for disordered materials science, an area with strong research and practical potential that remains understudied.
+It combines my expertise in data mining with my collaborators' expertise in disordered materials science, and has the potential to grow into a dedicated group at the interface of the two fields.
+
+\vspace{\entryskip}
+I am pursuing this vision through three connected works.
+The first two are AI agents that automate steps of materials discovery that a scientist normally runs by hand, and the third gives the field a fair way to measure how well such methods work.
+
+\vspace{\entryskip}
+The first agent handles the full computational loop of inverse design, which starts from the properties one wants and works out a material that has them.
+It proposes a recipe a lab could follow, the composition and the steps to melt and cool it, and checks every candidate against physics simulation so that its suggestions stay realistic.
+This makes every proposal something a lab can actually build, unlike methods that return a design with no way to make it.
+
+\vspace{\entryskip}
+The second agent works one level up and designs the AI models used for this discovery, acting as an automated researcher.
+In each attempt it proposes a model, builds and trains it, measures how well it performs, and records what it learned, so that later attempts read those lessons and improve on them.
+
+\vspace{\entryskip}
+The third work is a rigorous benchmark for judging these models, tailored to disordered materials.
+Existing benchmarks compare one generated structure against one reference, a setup suited to ordered crystals that breaks down for disordered materials, where a single material is better described by many equally valid structures.
+The benchmark judges quality across this whole set and against reference structures from simulation, giving the field a shared and reliable standard to build on.
+
+\vspace{\entryskip}
+Each of these already runs as an early prototype, building on my published models, a trusted physics simulation pipeline, and my collaboration with Morten M. Smedskjaer's group.
+I am now scaling them up with collaborators experienced in building such systems.
+
+\vspace{\entryskip}
+Alongside this, I will continue my established data mining research, since the two directions are complementary and reinforce each other.
+I will also pursue funding to support this program, building on my experience contributing to funded projects and preparing research proposals.
+
+\subsection*{Broader Impact}
+AI for materials discovery can accelerate the development and adoption of new disordered materials for energy storage, energy production, and advanced optics.
+The disordered materials group I collaborate with prepares and validates promising candidates in the laboratory, so successful designs can move toward real use.
+
+\vspace{\entryskip}
+These applications align with the green transition goals of Denmark, the EU, and the UN, including the Sustainable Development Goals on responsible production and climate action.
+By bridging computer science and materials science, this direction also builds lasting interdisciplinary research capacity and a durable collaboration across the two fields that benefits both in the long term.
