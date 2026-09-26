@@ -1,16 +1,14 @@
-all: main-full main-short list research-plan teaching-portfolio cover-letter
+all: main list teaching-portfolio cover-letter
 
-main-full: main-full.tex
-	latexmk -pdf -bibtex -shell-escape -interaction=nonstopmode -output-directory="./out" -f main-full.tex
+ifdef EXTENDED
+MAIN_FLAGS = -jobname=main-extended -usepretex='\def\extendedcv{}'
+endif
 
-main-short: main-short.tex
-	latexmk -pdf -bibtex -shell-escape -interaction=nonstopmode -output-directory="./out" -f main-short.tex
+main: main.tex
+	latexmk -pdf -bibtex -shell-escape -interaction=nonstopmode -output-directory="./out" -f $(MAIN_FLAGS) main.tex
 
 list: list.tex
 	latexmk -pdf -bibtex -shell-escape -interaction=nonstopmode -output-directory="./out" -f list.tex
-
-research-plan: research-plan.tex
-	latexmk -pdf -bibtex -shell-escape -interaction=nonstopmode -output-directory="./out" -f research-plan.tex
 
 teaching-portfolio: teaching-portfolio.tex
 	latexmk -pdf -bibtex -shell-escape -interaction=nonstopmode -output-directory="./out" -f teaching-portfolio.tex
