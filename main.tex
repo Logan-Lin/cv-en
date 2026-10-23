@@ -1,13 +1,12 @@
 \documentclass[a4paper]{article}
 
 \usepackage{cv}
+\cvdocument{Curriculum Vitae}
 
 \ifdefined\extendedcv
-\cvdocument{Extended Curriculum Vitae}
 \newcommand{\listsnote}{%
 Full lists are provided in the \hyperref[sec:publications]{Publications}, \hyperref[sec:projects]{Projects}, and \hyperref[sec:presentations]{Presentations} sections below.}
 \else
-\cvdocument{Curriculum Vitae}
 \newcommand{\listsnote}{%
 Full lists are provided in a separate document, or can be viewed on my homepage's \href{https://www.yanlincs.com/publications/}{Publications}, \href{https://www.yanlincs.com/projects/}{Projects}, and \href{https://www.yanlincs.com/activities/}{Activities} pages.
 }
@@ -20,11 +19,15 @@ Full lists are provided in a separate document, or can be viewed on my homepage'
 
 \input{comp/research-experience.tex}
 
+\ifdefined\minimalcv\else
 \input{comp/research-plan.tex}
+\fi
 
 \input{comp/teaching-experience.tex}
 
+\ifdefined\minimalcv\else
 \input{comp/teaching-reflections.tex}
+\fi
 
 \ifdefined\extendedcv
 \input{comp/publications.tex}

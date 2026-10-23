@@ -1,11 +1,13 @@
 all: main list cover-letter
 
 ifdef EXTENDED
-MAIN_FLAGS = -jobname=main-extended -usepretex='\def\extendedcv{}'
+MAIN_FLAGS = -usepretex='\def\extendedcv{}'
+else ifdef MINIMAL
+MAIN_FLAGS = -usepretex='\def\minimalcv{}'
 endif
 
 main: main.tex
-	latexmk -pdf -bibtex -shell-escape -interaction=nonstopmode -output-directory="./out" -f $(MAIN_FLAGS) main.tex
+	latexmk -pdf -bibtex -shell-escape -interaction=nonstopmode -output-directory="./out" -f -g $(MAIN_FLAGS) main.tex
 
 list: list.tex
 	latexmk -pdf -bibtex -shell-escape -interaction=nonstopmode -output-directory="./out" -f list.tex
