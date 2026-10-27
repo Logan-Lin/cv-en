@@ -42,7 +42,7 @@ Publications where I am the first, co-first, or lead student author. For each wo
 \pubentry{NeurIPS, 2025, CORE Rank A*}{\href{https://neurips.cc/virtual/2025/oral/117509}{Oral} \,/\, \href{https://neurips.cc/virtual/2025/poster/117508}{Poster} \,/\, \href{https://arxiv.org/abs/2505.12672}{Preprint}}
 {TransferTraj: A Vehicle Trajectory Learning Model for Region and Task Transferability}
 {Tonglong Wei*, \me*, Zeyu Zhou, Haomin Wen, Jilin Hu, Shengnan Guo, Youfang Lin, Gao Cong, Huaiyu Wan}
-{Learns from vehicle GPS trajectories in a way that transfers across different geographic regions and different prediction tasks without retraining, removing the need to keep separate specialized models. Handles each task by treating it as recovering hidden parts of a trajectory, so one model serves many tasks even with limited data.}
+{Pre-trains a vehicle GPS trajectory model in one region and transfers it to other regions and to different tasks without retraining, removing the need to keep separate specialized models. Handles each task by treating it as recovering hidden parts of a trajectory, so one model serves many tasks even with limited data.}
 
 \pubentry{NeurIPS, 2025, CORE Rank A*}{\href{https://neurips.cc/virtual/2025/poster/117945}{Poster} \,/\, \href{https://arxiv.org/abs/2410.14281}{Preprint}}
 {PLMTrajRec: A Scalable and Generalizable Trajectory Recovery Method with Pre-trained Language Models}
@@ -52,7 +52,7 @@ Publications where I am the first, co-first, or lead student author. For each wo
 \pubentry{IEEE TKDE, 2025, Impact Factor 11.6}{\href{https://ieeexplore.ieee.org/document/11004614}{Paper} \,/\, \href{https://arxiv.org/abs/2402.07232}{Preprint} \,/\, \href{https://github.com/Logan-Lin/UVTM}{Code}}
 {UVTM: Universal Vehicle Trajectory Modeling with ST Feature Domain Generation}
 {\me, Jilin Hu, Shengnan Guo, Bin Yang, Christian S. Jensen, Youfang Lin, Huaiyu Wan}
-{A single model for vehicle GPS trajectories that handles many tasks such as travel time estimation, trajectory recovery, and trajectory prediction, instead of maintaining a separate model for each. It stays accurate even when trajectories are sparse or only part of their features are available, by learning to rebuild dense and complete trajectories from incomplete ones.}
+{A foundational model for vehicle GPS trajectories that is pre-trained once and adapts to many tasks such as travel time estimation, trajectory recovery, and trajectory prediction, instead of maintaining a separate model for each. It stays accurate even when trajectories are sparse or only part of their features are available, by learning to rebuild dense and complete trajectories from incomplete ones.}
 
 \pubentry{IJCAI, 2025, CORE Rank A*}{\href{https://www.ijcai.org/proceedings/2025/411}{Paper} \,/\, \href{https://arxiv.org/abs/2405.12459}{Preprint} \,/\, \href{https://github.com/Zeru19/PLM4Traj}{Code}}
 {TrajCogn: Leveraging LLMs for Cognizing Movement Patterns and Travel Purposes from Trajectories}
@@ -62,7 +62,7 @@ Publications where I am the first, co-first, or lead student author. For each wo
 \pubentry{IEEE TKDE, 2025, Impact Factor 11.6}{\href{https://ieeexplore.ieee.org/document/10818577}{Paper} \,/\, \href{https://arxiv.org/abs/2407.12550}{Preprint} \,/\, \href{https://github.com/Logan-Lin/UniTE}{Code}}
 {UniTE: A Survey and Unified Pipeline for Pre-training Spatiotemporal Trajectory Embeddings}
 {\me, Zeyu Zhou, Yicheng Liu, Haochen Lv, Haomin Wen, Tianyi Li, Yushuai Li, Christian S. Jensen, Shengnan Guo, Youfang Lin, Huaiyu Wan}
-{Surveys existing methods for learning reusable representations of movement trajectories and brings them together into a single modular framework with shared code, so that new methods can be built, compared, and evaluated on the same basis.}
+{Surveys existing methods for pre-training universal representations of vehicle and human trajectories that apply across different tasks, and brings them together into a single modular framework with shared code, so that new methods can be built, compared, and evaluated on the same basis.}
 
 \pubentry{WWW, 2025, CORE Rank A*}{\href{https://openreview.net/forum?id=KmMSQS6tFn}{Paper} \,/\, \href{https://github.com/decisionintelligence/Path-LLM}{Code}}
 {Path-LLM: A Multi-Modal Path Representation Learning by Aligning and Fusing with Large Language Models}
@@ -87,7 +87,7 @@ Publications where I am the first, co-first, or lead student author. For each wo
 \pubentry{IEEE TKDE, 2023, Impact Factor 8.9}{\href{https://ieeexplore.ieee.org/abstract/document/10375102}{Paper} \,/\, \href{https://arxiv.org/abs/2207.14539}{Preprint} \,/\, \href{https://github.com/Logan-Lin/MMTEC}{Code}}
 {Pre-training General Trajectory Embeddings with Maximum Multi-view Entropy Coding}
 {\me, Huaiyu Wan, Shengnan Guo, Jilin Hu, Christian S. Jensen, Youfang Lin}
-{Learns general-purpose representations of movement trajectories from unlabeled data that capture both travel behavior and spatial and temporal patterns. The learned representations avoid task-specific bias so they transfer well across many downstream tasks.}
+{Pre-trains general-purpose representations of movement trajectories from unlabeled data that capture both travel behavior and spatial and temporal patterns. The learned representations avoid task-specific bias, so they can be reused across many downstream tasks instead of being learned anew for each.}
 
 \pubentry{IEEE TKDE, 2022, Impact Factor 8.9}{\href{https://ieeexplore.ieee.org/abstract/document/9351627}{Paper} \,/\, \href{https://github.com/Logan-Lin/TALE}{Code}}
 {Pre-training Time-Aware Location Embeddings from Spatial-Temporal Trajectories}
@@ -97,7 +97,7 @@ Publications where I am the first, co-first, or lead student author. For each wo
 \pubentry{AAAI, 2021, CORE Rank A*}{\href{https://ojs.aaai.org/index.php/AAAI/article/view/16548}{Paper} \,/\, \href{https://github.com/Logan-Lin/CTLE}{Code}}
 {Pre-training Context and Time Aware Location Embeddings from Spatial-Temporal Trajectories for User Next Location Prediction}
 {\me, Huaiyu Wan, Shengnan Guo, Youfang Lin}
-{Pre-trains location representations from movement trajectories that capture how the meaning of a place changes with its surrounding context and the time of visit, leading to more accurate prediction of a user's next location.}
+{Pre-trains location representations from human movement trajectories that capture how the meaning of a place changes with its surrounding context and the time of visit. The representations can be shared across different prediction models, making their prediction of a user's next location more accurate.}
 
 \subsection*{Secondary (contributing author)}
 Publications where I serve as a contributing author. My involvement in these works typically includes technical discussion, algorithm refinement, or contribution to experiments and writing.
